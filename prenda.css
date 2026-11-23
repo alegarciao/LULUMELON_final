@@ -1,0 +1,293 @@
+.product-page {
+    max-inline-size: 62rem;
+    margin-inline: auto;
+    padding: 0.75rem clamp(0.65rem, 4vw, 2.5rem) clamp(2rem, 8vw, 5rem);
+}
+
+.product-detail[hidden],
+.recommendations[hidden] {
+    display: none;
+}
+
+.product-detail {
+    display: grid;
+    grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+    align-items: start;
+    gap: clamp(0.65rem, 4vw, 3.5rem);
+    color: #211817;
+}
+
+.product-detail__image {
+    inline-size: 100%;
+    block-size: clamp(20rem, 96vw, 36rem);
+    object-fit: contain;
+    object-position: center top;
+}
+
+.product-detail__info {
+    padding-block-start: clamp(0.75rem, 9vw, 4.5rem);
+    overflow-wrap: anywhere;
+}
+
+.product-detail__name {
+    font-family: var(--font-body);
+    font-size: clamp(1rem, 3.6vw, 2rem);
+    font-weight: 700;
+    line-height: 1.15;
+    text-transform: uppercase;
+}
+
+.product-detail__price {
+    margin-block: 0.7rem;
+    font-family: var(--font-serif);
+    font-size: clamp(1.05rem, 3.6vw, 1.55rem);
+    text-align: center;
+}
+
+.product-detail__form {
+    display: grid;
+    gap: 0.7rem;
+}
+
+.product-detail__options {
+    min-inline-size: 0;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+.product-detail__label {
+    margin-block-end: 0.25rem;
+    padding: 0;
+    font-family: var(--font-serif);
+    font-size: clamp(1rem, 3.5vw, 1.35rem);
+    font-weight: 500;
+    line-height: 1.15;
+}
+
+.product-detail__choices {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.2rem;
+}
+
+.product-detail__option {
+    position: relative;
+    display: grid;
+    place-items: center;
+    min-inline-size: 2rem;
+    min-block-size: 2rem;
+    cursor: pointer;
+}
+
+.product-detail__swatch {
+    inline-size: 1.5rem;
+    block-size: 1.5rem;
+    border: 1px solid var(--color-wine);
+    border-radius: 0 0 100% 100%;
+    background-color: var(--swatch-color);
+    transform: rotate(42deg);
+}
+
+.product-detail__size {
+    display: grid;
+    place-items: center;
+    min-inline-size: 1.85rem;
+    min-block-size: 1.75rem;
+    border: 1px solid #a67b75;
+    border-radius: 0.15rem;
+    font-size: 0.72rem;
+}
+
+.product-detail__option input:checked+.product-detail__swatch,
+.product-detail__option input:focus-visible+span {
+    outline: 2px solid var(--color-wine);
+    outline-offset: 2px;
+}
+
+.product-detail__option input:checked+.product-detail__size {
+    border-color: var(--color-wine);
+    background-color: var(--color-wine);
+    color: var(--color-white);
+}
+
+.product-detail__selection,
+.product-detail__status {
+    font-size: 0.8rem;
+}
+
+.product-detail__status:empty {
+    display: none;
+}
+
+.product-detail__status--message {
+    display: block;
+    padding: 0.45rem 0.65rem;
+    border: 1px solid #b84c5f;
+    border-radius: 0.35rem;
+    background: #fff5f3;
+    color: #7d2634;
+    font-family: var(--font-body);
+    text-align: center;
+}
+
+.product-detail__status--success {
+    display: block;
+    padding: 0.45rem 0.65rem;
+    border: 1px solid #8f9a6a;
+    border-radius: 0.35rem;
+    background: #f7f6e9;
+    color: #5f653f;
+    font-family: var(--font-body);
+    text-align: center;
+}
+
+.product-detail__description {
+    font-size: clamp(0.8rem, 2.8vw, 1rem);
+    line-height: 1.4;
+}
+
+.product-detail__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.product-detail__button {
+    display: inline-grid;
+    place-items: center;
+    min-block-size: 44px;
+    padding: 0.45rem 0.75rem;
+    border: 1px solid var(--color-wine);
+    border-radius: 0.2rem;
+    background-color: var(--color-wine);
+    color: var(--color-white);
+    font: 500 0.78rem / 1.25 var(--font-body);
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.product-detail__button--secondary {
+    background-color: var(--color-white);
+    color: var(--color-wine);
+}
+
+.product-detail__button:hover {
+    text-decoration: underline;
+}
+
+.recommendations {
+    margin-block-start: clamp(1rem, 4vw, 2.5rem);
+}
+
+.recommendations__title {
+    color: #211817;
+    font: 400 clamp(1.8rem, 7vw, 3.25rem) / 1.1 var(--font-script);
+}
+
+.recommendations__list {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: clamp(0.8rem, 5vw, 2.5rem) clamp(0.35rem, 3vw, 1.75rem);
+    margin: 0.65rem 0 0;
+    padding: 0;
+    list-style: none;
+}
+
+.recommendations__link {
+    display: grid;
+    grid-template-rows: auto 1fr;
+    gap: 0.45rem;
+    block-size: 100%;
+    color: var(--color-wine);
+    text-align: center;
+    text-decoration: none;
+}
+
+.recommendations__link:hover .recommendations__name {
+    text-decoration: underline;
+}
+
+.recommendations__name {
+    min-block-size: 2.2em;
+    font: 400 clamp(0.85rem, 4vw, 1.6rem) / 1.1 var(--font-serif);
+    overflow-wrap: anywhere;
+}
+
+.recommendations__image {
+    inline-size: 100%;
+    aspect-ratio: 3 / 4;
+    object-fit: contain;
+}
+
+.site-header__hanger-fallback {
+    display: none;
+}
+
+.site-header__hanger-fallback[hidden] {
+    display: none;
+}
+
+@media (max-width: 23rem) {
+    .product-detail__actions {
+        display: grid;
+    }
+}
+
+@media (max-width: 47.999rem) {
+    .product-page {
+        max-inline-size: 24.5625rem;
+        padding-inline: clamp(0.75rem, 4vw, 1.25rem);
+    }
+
+    .product-detail {
+        grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+        gap: 0.75rem;
+    }
+
+    .product-detail__image {
+        block-size: clamp(14rem, 82vw, 23rem);
+    }
+
+    .product-detail__info {
+        padding-block-start: clamp(1.25rem, 7vw, 2.5rem);
+    }
+
+    .product-detail__name {
+        font-size: clamp(0.95rem, 4.5vw, 1.35rem);
+    }
+
+    .product-detail__price {
+        margin-block: 0.5rem;
+        font-size: clamp(1rem, 4vw, 1.2rem);
+    }
+
+    .product-detail__choices {
+        gap: 0.1rem;
+    }
+
+    .product-detail__option {
+        min-inline-size: 1.75rem;
+        min-block-size: 1.75rem;
+    }
+
+    .product-detail__swatch {
+        inline-size: 1.25rem;
+        block-size: 1.25rem;
+    }
+
+    .product-detail__size {
+        min-inline-size: 1.55rem;
+        min-block-size: 1.55rem;
+        font-size: 0.68rem;
+    }
+
+    .recommendations {
+        margin-block-start: 1.5rem;
+    }
+
+    .recommendations__list {
+        gap: 1rem 0.5rem;
+    }
+}

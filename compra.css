@@ -1,0 +1,99 @@
+.purchase {
+    max-inline-size: 45rem;
+    margin-inline: auto;
+    padding: clamp(2.5rem, 10vw, 5rem) var(--page-gutter) clamp(4rem, 12vw, 7rem);
+    text-align: center;
+}
+
+.purchase__title {
+    margin-block-end: clamp(1.5rem, 7vw, 3.5rem);
+    color: #a9857f;
+    font: 400 clamp(2.2rem, 9vw, 4.5rem)/1.15 var(--font-script);
+}
+
+.purchase__receipt {
+    position: relative;
+    width: min(100%, 26rem);
+    aspect-ratio: 638 / 960;
+    margin-inline: auto;
+    padding: 0;
+    background: url("factura_lulu.png") center / 100% 100% no-repeat;
+    border: 0;
+}
+
+.purchase__receipt-title {
+    position: absolute;
+    inset-block-start: 12.5%;
+    inset-inline: 8%;
+    color: #a9857f;
+    font: 400 clamp(2rem, 8vw, 3.25rem)/1.1 var(--font-script);
+}
+
+.purchase__preview {
+    position: absolute;
+    z-index: 1;
+    inset-block-start: 27%;
+    inset-inline: 12%;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    gap: 0.45rem;
+    min-block-size: 18%;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.purchase__preview-item { inline-size: min(5.5rem, 27%); }
+.purchase__preview-item img { inline-size: 100%; block-size: clamp(5.5rem, 24vw, 8.5rem); object-fit: contain; }
+
+.purchase__brand {
+    display: none;
+}
+
+.purchase__brand span { margin-inline: 0.12em; }
+.purchase__tagline {
+    position: absolute;
+    inset-inline: 8%;
+    inset-block-end: 13%;
+    font-size: clamp(0.72rem, 2.8vw, 0.95rem);
+}
+.purchase__details {
+    position: absolute;
+    inset-inline: 8%;
+    inset-block-end: 4.5%;
+    display: grid;
+    gap: 0.1rem;
+    font: 500 clamp(0.68rem, 2.5vw, 0.82rem)/1.25 var(--font-body);
+}
+.purchase__details p { margin: 0; }
+
+.purchase__back {
+    display: inline-grid;
+    place-items: center;
+    min-block-size: 44px;
+    margin-block-start: 2rem;
+    padding: 0.55rem 1.25rem;
+    border: 1px solid var(--color-wine);
+    border-radius: 0.7rem;
+    background: var(--color-wine);
+    color: var(--color-white);
+    text-decoration: none;
+}
+
+.site-header__action>.fa-clothes-hanger {
+    display: grid;
+    place-items: center;
+    inline-size: 1.25em;
+    block-size: 1.25em;
+}
+
+.site-header__action>.fa-clothes-hanger svg {
+    inline-size: 100%;
+    block-size: 100%;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.7;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
