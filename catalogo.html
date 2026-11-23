@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html lang="es-BO">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Catálogo | Lulu Melón</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Ancizar+Serif:wght@300;400;500&family=Kapakana&family=Montserrat:wght@400;500&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="globals.css">
+    <link rel="stylesheet" href="catalogo.css">
+    <script src="catalogo.js" defer></script>
+    <script src="carrito.js" defer></script>
+</head>
+
+<body>
+    <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+    <header class="site-header">
+        <details class="site-menu">
+            <summary class="site-menu__toggle">
+                <i class="fa-solid fa-bars" aria-hidden="true"></i>
+                <span class="visually-hidden">Menú principal</span>
+            </summary>
+
+            <nav class="site-menu__panel" aria-label="Navegación principal">
+                <ul class="site-menu__list" role="list">
+                    <li class="site-menu__item">
+                        <a class="site-menu__link" href="index.html">Inicio</a>
+                    </li>
+                    <li class="site-menu__item">
+                        <a class="site-menu__link" href="probador.html">
+                            Probador
+                        </a>
+                    </li>
+                    <li class="site-menu__item">
+                        <a class="site-menu__link" href="sobre-nosotros.html">
+                            Sobre Nosotros
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </details>
+
+        <a class="site-header__brand" href="index.html">
+            <img src="logo_lulumelon_.png" width="118" height="45" alt="Lulu Melón, inicio">
+        </a>
+
+        <nav class="site-header__actions" aria-label="Accesos de la tienda">
+            <a class="site-header__action" href="catalogo.html" aria-label="Buscar en el catálogo"
+                title="Buscar en el catálogo">
+                <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+            </a>
+            <a class="site-header__action" href="carrito.html" aria-label="Carrito">
+                <i class="fa-solid fa-cart-shopping" aria-hidden="true"></i>
+            </a>
+            <a class="site-header__action" href="probador.html" aria-label="Probador" title="Probador">
+                <i class="fa-solid fa-clothes-hanger" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" focusable="false">
+                        <path
+                            d="M9.5 7.5a2.5 2.5 0 1 1 3.1 2.42c-.76.25-1.1.8-1.1 1.58v.25L3.5 17.6a1.5 1.5 0 0 0 1.38 2.15h14.24a1.5 1.5 0 0 0 1.38-2.15l-8-5.85" />
+                    </svg>
+                </i>
+            </a>
+        </nav>
+    </header>
+
+    <main class="catalog" id="contenido">
+        <section class="catalog__hero" aria-labelledby="catalogo-title">
+            <header class="catalog__intro">
+                <h1 class="catalog__title" id="catalogo-title">
+                    <span class="visually-hidden">Catálogo de Lulu Melón</span>
+                    <span lang="en">The Best Options</span>
+                </h1>
+                <p class="catalog__description">
+                    Todos los looks que tienes guardados como inspo, pronto los
+                    encontrarás acá.
+                </p>
+                <p class="catalog__description">
+                    Encuentra las prendas clave para armar outfits sin esfuerzo.
+                    Desde faldas con caída perfecta hasta básicos infaltables que
+                    se adaptan a tu ritmo de vida.
+                </p>
+            </header>
+
+            <div class="catalog__hero-visual">
+                <figure class="catalog__hero-photo catalog__hero-photo--back-one">
+                    <img src="Falda Gingham en Marco Polaroid (1).png" alt="Prenda Lace Top" loading="lazy">
+                </figure>
+                <figure class="catalog__hero-photo catalog__hero-photo--back-two">
+                    <img src="Falda Gingham en Marco Polaroid.png" alt="Prenda Shangai Lace" loading="lazy">
+                </figure>
+                <img class="catalog__hero-image" src="Mujer elegante con falda gingham y bolso.png"
+                    alt="Mujer elegante con falda gingham y bolso" fetchpriority="high">
+            </div>
+        </section>
+
+        <section class="catalog__section" aria-labelledby="vacation-title">
+            <h2 class="catalog__title" id="vacation-title" lang="en">The Vacation Edit</h2>
+
+            <section class="catalog-carousel" aria-labelledby="vacation-title">
+                <ul class="catalog-carousel__track" id="vacation-prendas" role="list" tabindex="0"
+                    aria-labelledby="vacation-title">
+                    <li class="catalog-card">
+                        <figure class="catalog-card__figure">
+                            <figcaption class="catalog-card__name">Napoleon</figcaption>
+                            <img class="catalog-card__image" src="vac-edit/napoleaon.png" alt="Napoleon" loading="lazy">
+                        </figure>
+                    </li>
+                    <li class="catalog-card">
+                        <figure class="catalog-card__figure">
+                            <figcaption class="catalog-card__name">Napoleon Jacket</figcaption>
+                            <img class="catalog-card__image" src="vac-edit/napoleon jacket.png" alt="Napoleon Jacket"
+                                loading="lazy">
+                        </figure>
+                    </li>
+                    <li class="catalog-card">
+                        <figure class="catalog-card__figure">
+                            <figcaption class="catalog-card__name">Broderie</figcaption>
+                            <img class="catalog-card__image" src="vac-edit/Broderie.png" alt="Broderie" loading="lazy">
+                        </figure>
+                    </li>
+                    <li class="catalog-card">
+                        <figure class="catalog-card__figure">
+                            <figcaption class="catalog-card__name">Smocked</figcaption>
+                            <img class="catalog-card__image" src="vac-edit/Smocked.png" alt="Smocked" loading="lazy">
+                        </figure>
+                    </li>
+                    <li class="catalog-card">
+                        <figure class="catalog-card__figure">
+                            <figcaption class="catalog-card__name">Shangai</figcaption>
+                            <img class="catalog-card__image" src="vac-edit/Shangai.png" alt="Shangai" loading="lazy">
+                        </figure>
+                    </li>
+                </ul>
+            </section>
+        </section>
+
+        <section class="catalog__section" aria-labelledby="basicos-title">
+            <h2 class="catalog__title" id="basicos-title">Básicos y Bodys</h2>
+
+            <section class="catalog-carousel" aria-labelledby="tops-basicos-title">
+                <h3 class="catalog__category" id="tops-basicos-title">Básicos</h3>
+                <ul class="catalog-carousel__track" id="basicos-prendas" role="list" tabindex="0"
+                    aria-labelledby="tops-basicos-title">
+                    <li class="catalog-card">
+                        <figure class="catalog-card__figure">
+                            <figcaption class="catalog-card__name">Basics Long Sleeve</figcaption>
+                            <img class="catalog-card__image" src="basicos/basics long sleeve.png"
+                                alt="Basics Long Sleeve" loading="lazy">
+                        </figure>
+                    </li>
+                    <li class="catalog-card">
+                        <figure class="catalog-card__figure">
+                            <figcaption class="catalog-card__name">Basics T-Shirt</figcaption>
+                            <img class="catalog-card__image" src="basicos/basics t-shirt.png" alt="Basics T-Shirt"
+                                loading="lazy">
+                        </figure>
+                    </li>
+                    <li class="catalog-card">
+                        <figure class="catalog-card__figure">
+                            <figcaption class="catalog-card__name">Blackless Top</figcaption>
+                            <img class="catalog-card__image" src="basicos/blackless top.png" alt="Blackless Top"
+                                loading="lazy">
+                        </figure>
+                    </li>
+                    <li class="catalog-card">
+                        <figure class="catalog-card__figure">
+                            <figcaption class="catalog-card__name">Manga Cero</figcaption>
+                            <img class="catalog-card__image" src="basicos/manga cero.png" alt="Manga Cero"
+                                loading="lazy">
+                        </figure>
+                    </li>
+                    <li class="catalog-card">
+                        <figure class="catalog-card__figure">
+                            <figcaption class="catalog-card__name">Solera Básica</figcaption>
+                            <img class="catalog-card__image" src="basicos/solera basica.png" alt="Solera Básica"
+                                loading="lazy">
+                        </figure>
+                    </li>
+                    </li>
+                </ul>
+            </section>
+
+            <section class="catalog-carousel" aria-labelledby="bodys-title">
+                <h3 class="catalog__category" id="bodys-title">Bodys</h3>
+                <ul class="catalog-carousel__track" id="bodys-prendas" role="list" tabindex="0"
+                    aria-labelledby="bodys-title">
+                    <li class="catalog-card">
+                        <figure class="catalog-card__figure">
+                            <figcaption class="catalog-card__name">Esteem</figcaption>
+                            <img class="catalog-card__image" src="bodys/Esteem.png" alt="Esteem" loading="lazy">
+                        </figure>
+                    </li>
+                    <li class="catalog-card">
+                        <figure class="catalog-card__figure">
+                            <figcaption class="catalog-card__name">V Neck</figcaption>
+                            <img class="catalog-card__image" src="bodys/V neck.png" alt="V Neck" loading="lazy">
+                        </figure>
+                    </li>
+                    <li class="catalog-card">
+                        <figure class="catalog-card__figure">
+                            <figcaption class="catalog-card__name">Mil usos</figcaption>
+                            <img class="catalog-card__image" src="bodys/Mil usos.png" alt="Mil usos" loading="lazy">
+                        </figure>
+                    </li>
+                    <li class="catalog-card">
+                        <figure class="catalog-card__figure">
+                            <figcaption class="catalog-card__name">Escote Cuadrado Manga Larga</figcaption>
+                            <img class="catalog-card__image" src="bodys/escote cuadrado manga larga.png"
+                                alt="Escote Cuadrado Manga Larga" loading="lazy">
+                        </figure>
+                    </li>
+                    <li class="catalog-card">
+                        <figure class="catalog-card__figure">
+                            <figcaption class="catalog-card__name">Escote Cuadrado</figcaption>
+                            <img class="catalog-card__image" src="bodys/escote cuadrado.png" alt="Escote Cuadrado"
+                                loading="lazy">
+                        </figure>
+                    </li>
+                    </li>
+                </ul>
+            </section>
+
+            <section class="catalog-carousel" aria-labelledby="tops-title">
+                <h3 class="catalog__category" id="tops-title">Tops</h3>
+                <ul class="catalog-carousel__track" id="tops-prendas" role="list" tabindex="0"
+                    aria-labelledby="tops-title">
+                    <li class="catalog-card">
+                        <figure class="catalog-card__figure">
+                            <figcaption class="catalog-card__name">Off Shoulder</figcaption>
+                            <img class="catalog-card__image" src="tops/off shouldder.png" alt="Off Shoulder"
+                                loading="lazy">
+                        </figure>
+                    </li>
+                    <li class="catalog-card">
+                        <figure class="catalog-card__figure">
+                            <figcaption class="catalog-card__name">Halter Mao</figcaption>
+                            <img class="catalog-card__image" src="tops/Halter Mao.png" alt="Halter Mao" loading="lazy">
+                        </figure>
+                    </li>
+                    <li class="catalog-card">
+                        <figure class="catalog-card__figure">
+                            <figcaption class="catalog-card__name">Broderie Strapless</figcaption>
+                            <img class="catalog-card__image" src="tops/BRODERIE strapless.png" alt="Broderie Strapless"
+                                loading="lazy">
+                        </figure>
+                    </li>
+                    <li class="catalog-card">
+                        <figure class="catalog-card__figure">
+                            <figcaption class="catalog-card__name">Lace Trim</figcaption>
+                            <img class="catalog-card__image" src="tops/LACE TRIM.png" alt="Lace Trim" loading="lazy">
+                        </figure>
+                    </li>
+                    <li class="catalog-card">
+                        <figure class="catalog-card__figure">
+                            <figcaption class="catalog-card__name">Smocked</figcaption>
+                            <img class="catalog-card__image" src="tops/Smocked.png" alt="Smocked" loading="lazy">
+                        </figure>
+                    </li>
+                </ul>
+            </section>
+        </section>
+
+        <section class="catalog__section" aria-labelledby="bottoms-title">
+            <h2 class="catalog__title" id="bottoms-title" lang="en">Bottoms</h2>
+
+            <section class="catalog-carousel catalog-carousel--tall" aria-labelledby="jeans-title">
+                <h3 class="catalog__category" id="jeans-title">Jeans</h3>
+                <ul class="catalog-carousel__track" id="jeans-prendas" role="list" tabindex="0"
+                    aria-labelledby="jeans-title">
+                    <li class="catalog-card">
+                        <figure class="catalog-card__figure">
+                            <figcaption class="catalog-card__name">Mid-Low Waisted</figcaption>
+                            <img class="catalog-card__image" src="jeans/mid low waisted.png" alt="Mid-Low Waisted"
+                                loading="lazy">
+                        </figure>
+                    </li>
+                    <li class="catalog-card">
+                        <figure class="catalog-card__figure">
+                            <figcaption class="catalog-card__name">Belted</figcaption>
+                            <img class="catalog-card__image" src="jeans/belted.png" alt="Belted" loading="lazy">
+                        </figure>
+                    </li>
+                    <li class="catalog-card">
+                        <figure class="catalog-card__figure">
+                            <figcaption class="catalog-card__name">Barrel Jean</figcaption>
+                            <img class="catalog-card__image" src="jeans/barrel jean.png" alt="Barrel Jean"
+                                loading="lazy">
+                        </figure>
+                    </li>
+                    <li class="catalog-card">
+                        <figure class="catalog-card__figure">
+                            <figcaption class="catalog-card__name">High-Waisted</figcaption>
+                            <img class="catalog-card__image" src="jeans/high-waisted.png" alt="High-Waisted"
+                                loading="lazy">
+                        </figure>
+                    </li>
+                    <li class="catalog-card">
+                        <figure class="catalog-card__figure">
+                            <figcaption class="catalog-card__name">Mom Classic</figcaption>
+                            <img class="catalog-card__image" src="jeans/mom classic.png" alt="Mom Classic"
+                                loading="lazy">
+                        </figure>
+                    </li>
+                </ul>
+            </section>
+
+            <section class="catalog-carousel catalog-carousel--tall" aria-labelledby="faldas-title">
+                <h3 class="catalog__category" id="faldas-title">Faldas</h3>
+                <ul class="catalog-carousel__track" id="faldas-prendas" role="list" tabindex="0"
+                    aria-labelledby="faldas-title">
+                    <li class="catalog-card">
+                        <figure class="catalog-card__figure">
+                            <figcaption class="catalog-card__name">Maxi Skirt</figcaption>
+                            <img class="catalog-card__image" src="faldas/maxi skirt.png" alt="Maxi Skirt"
+                                loading="lazy">
+                        </figure>
+                    </li>
+                    <li class="catalog-card">
+                        <figure class="catalog-card__figure">
+                            <figcaption class="catalog-card__name">Mini Skirt</figcaption>
+                            <img class="catalog-card__image" src="faldas/mini skirt.png" alt="Mini Skirt"
+                                loading="lazy">
+                        </figure>
+                    </li>
+                    <li class="catalog-card">
+                        <figure class="catalog-card__figure">
+                            <figcaption class="catalog-card__name">Folded Mini</figcaption>
+                            <img class="catalog-card__image" src="faldas/folded mini.png" alt="Folded Mini"
+                                loading="lazy">
+                        </figure>
+                    </li>
+                    <li class="catalog-card">
+                        <figure class="catalog-card__figure">
+                            <figcaption class="catalog-card__name">Pleated Skirt</figcaption>
+                            <img class="catalog-card__image" src="faldas/pleated skirt.png" alt="Pleated Skirt"
+                                loading="lazy">
+                        </figure>
+                    </li>
+                    <li class="catalog-card">
+                        <figure class="catalog-card__figure">
+                            <figcaption class="catalog-card__name">Satin Lace Midi</figcaption>
+                            <img class="catalog-card__image" src="faldas/satin lace midi.png" alt="Satin Lace Midi"
+                                loading="lazy">
+                        </figure>
+                    </li>
+                </ul>
+            </section>
+
+            <section class="catalog-carousel catalog-carousel--tall" aria-labelledby="shorts-title">
+                <h3 class="catalog__category" id="shorts-title">Shorts</h3>
+                <ul class="catalog-carousel__track" id="shorts-prendas" role="list" tabindex="0"
+                    aria-labelledby="shorts-title">
+                    <li class="catalog-card">
+                        <figure class="catalog-card__figure">
+                            <figcaption class="catalog-card__name">Gingham Short</figcaption>
+                            <img class="catalog-card__image" src="shorts/gingham short.png" alt="Gingham Short"
+                                loading="lazy">
+                        </figure>
+                    </li>
+                    <li class="catalog-card">
+                        <figure class="catalog-card__figure">
+                            <figcaption class="catalog-card__name">Mini-short</figcaption>
+                            <img class="catalog-card__image" src="shorts/mini-short.png" alt="Mini-short"
+                                loading="lazy">
+                        </figure>
+                    </li>
+                    <li class="catalog-card">
+                        <figure class="catalog-card__figure">
+                            <figcaption class="catalog-card__name">Bermuda Cali</figcaption>
+                            <img class="catalog-card__image" src="shorts/bermuda cali.png" alt="Bermuda Cali"
+                                loading="lazy">
+                        </figure>
+                    </li>
+                </ul>
+            </section>
+
+            <section class="catalog-carousel catalog-carousel--tall" aria-labelledby="pantalones-title">
+                <h3 class="catalog__category" id="pantalones-title">Pantalones</h3>
+                <ul class="catalog-carousel__track" id="pantalones-prendas" role="list" tabindex="0"
+                    aria-labelledby="pantalones-title">
+                    <li class="catalog-card">
+                        <figure class="catalog-card__figure">
+                            <figcaption class="catalog-card__name">Low waisted</figcaption>
+                            <img class="catalog-card__image" src="pantalones/low-waisted.png" alt="Low waisted"
+                                loading="lazy">
+                        </figure>
+                    </li>
+                    <li class="catalog-card">
+                        <figure class="catalog-card__figure">
+                            <figcaption class="catalog-card__name">High Waisted</figcaption>
+                            <img class="catalog-card__image" src="pantalones/high-waisted.png" alt="High Waisted"
+                                loading="lazy">
+                        </figure>
+                    </li>
+                    <li class="catalog-card">
+                        <figure class="catalog-card__figure">
+                            <figcaption class="catalog-card__name">Barrel Pants</figcaption>
+                            <img class="catalog-card__image" src="pantalones/barrel-pants.png" alt="Barrel Pants"
+                                loading="lazy">
+                        </figure>
+                    </li>
+                </ul>
+            </section>
+        </section>
+
+        <section class="catalog__section" aria-labelledby="abrigos-title">
+            <h2 class="catalog__title" id="abrigos-title">Jackets y Sweaters</h2>
+
+            <section class="catalog-carousel" aria-labelledby="sweaters-title">
+                <h3 class="catalog__category" id="sweaters-title">Sweaters / Tejidos</h3>
+                <ul class="catalog-carousel__track" id="sweaters-prendas" role="list" tabindex="0"
+                    aria-labelledby="sweaters-title">
+                    <li class="catalog-card">
+                        <figure class="catalog-card__figure">
+                            <figcaption class="catalog-card__name">Washington</figcaption>
+                            <img class="catalog-card__image" src="sweaters/Washington.png" alt="Washington"
+                                loading="lazy">
+                        </figure>
+                    </li>
+                    <li class="catalog-card">
+                        <figure class="catalog-card__figure">
+                            <figcaption class="catalog-card__name">London</figcaption>
+                            <img class="catalog-card__image" src="sweaters/London.png" alt="London" loading="lazy">
+                        </figure>
+                    </li>
+                    <li class="catalog-card">
+                        <figure class="catalog-card__figure">
+                            <figcaption class="catalog-card__name">Preppy</figcaption>
+                            <img class="catalog-card__image" src="sweaters/Preppy.png" alt="Preppy" loading="lazy">
+                        </figure>
+                    </li>
+                    <li class="catalog-card">
+                        <figure class="catalog-card__figure">
+                            <figcaption class="catalog-card__name">Oklahoma</figcaption>
+                            <img class="catalog-card__image" src="sweaters/OKLAHOMA.png" alt="Oklahoma" loading="lazy">
+                        </figure>
+                    </li>
+                    <li class="catalog-card">
+                        <figure class="catalog-card__figure">
+                            <figcaption class="catalog-card__name">Mini Striped</figcaption>
+                            <img class="catalog-card__image" src="sweaters/Mini Striped.png" alt="Mini Striped"
+                                loading="lazy">
+                        </figure>
+                    </li>
+                </ul>
+            </section>
+
+            <section class="catalog-carousel" aria-labelledby="chamarras-title">
+                <h3 class="catalog__category" id="chamarras-title">Chamarras / Jackets</h3>
+                <ul class="catalog-carousel__track" id="chamarras-prendas" role="list" tabindex="0"
+                    aria-labelledby="chamarras-title">
+                    <li class="catalog-card">
+                        <figure class="catalog-card__figure">
+                            <figcaption class="catalog-card__name">Asymmetrical Jacket</figcaption>
+                            <img class="catalog-card__image" src="jackets/Asymmetrical jacket.png"
+                                alt="Asymmetrical Jacket" loading="lazy">
+                        </figure>
+                    </li>
+                    <li class="catalog-card">
+                        <figure class="catalog-card__figure">
+                            <figcaption class="catalog-card__name">Gingham Jacket</figcaption>
+                            <img class="catalog-card__image" src="jackets/Gingham jacket.png" alt="Gingham Jacket"
+                                loading="lazy">
+                        </figure>
+                    </li>
+                    <li class="catalog-card">
+                        <figure class="catalog-card__figure">
+                            <figcaption class="catalog-card__name">Denim</figcaption>
+                            <img class="catalog-card__image catalog-card__image--denim" src="jackets/denim.png" alt="Denim" loading="lazy">
+                        </figure>
+                    </li>
+                    <li class="catalog-card">
+                        <figure class="catalog-card__figure">
+                            <figcaption class="catalog-card__name" aria-hidden="true"></figcaption>
+                            <div class="catalog-card__image" aria-hidden="true"></div>
+                        </figure>
+                    </li>
+                    <li class="catalog-card">
+                        <figure class="catalog-card__figure">
+                            <figcaption class="catalog-card__name" aria-hidden="true"></figcaption>
+                            <div class="catalog-card__image" aria-hidden="true"></div>
+                        </figure>
+                    </li>
+                </ul>
+            </section>
+        </section>
+
+        <section class="catalog__section" aria-labelledby="vestidos-sets-title">
+            <h2 class="catalog__title" id="vestidos-sets-title">Vestidos y Sets</h2>
+
+            <section class="catalog-carousel catalog-carousel--tall" aria-labelledby="sets-title">
+                <h3 class="catalog__category" id="sets-title">Sets</h3>
+                <ul class="catalog-carousel__track" id="sets-prendas" role="list" tabindex="0"
+                    aria-labelledby="sets-title">
+                    <li class="catalog-card">
+                        <figure class="catalog-card__figure">
+                            <figcaption class="catalog-card__name">Alad</figcaption>
+                            <img class="catalog-card__image" src="sets/Alad.png" alt="Alad" loading="lazy">
+                        </figure>
+                    </li>
+                    <li class="catalog-card">
+                        <figure class="catalog-card__figure">
+                            <figcaption class="catalog-card__name">Lace</figcaption>
+                            <img class="catalog-card__image" src="sets/lace.png" alt="Lace" loading="lazy">
+                        </figure>
+                    </li>
+                    <li class="catalog-card">
+                        <figure class="catalog-card__figure">
+                            <figcaption class="catalog-card__name">Lace Mesh</figcaption>
+                            <img class="catalog-card__image" src="sets/Lace Mesh.png" alt="Lace Mesh" loading="lazy">
+                        </figure>
+                    </li>
+                    <li class="catalog-card">
+                        <figure class="catalog-card__figure">
+                            <figcaption class="catalog-card__name">Lace Summer</figcaption>
+                            <img class="catalog-card__image" src="sets/lace summer.png" alt="Lace Summer" loading="lazy">
+                        </figure>
+                    </li>
+                    <li class="catalog-card">
+                        <figure class="catalog-card__figure">
+                            <figcaption class="catalog-card__name">Mini Dots</figcaption>
+                            <img class="catalog-card__image" src="sets/mini dots.png" alt="Mini Dots" loading="lazy">
+                        </figure>
+                    </li>
+                    <li class="catalog-card">
+                        <figure class="catalog-card__figure">
+                            <figcaption class="catalog-card__name">Satin</figcaption>
+                            <img class="catalog-card__image" src="sets/satin.png" alt="Satin" loading="lazy">
+                        </figure>
+                    </li>
+                    <li class="catalog-card">
+                        <figure class="catalog-card__figure">
+                            <figcaption class="catalog-card__name">Kyoto</figcaption>
+                            <img class="catalog-card__image" src="sets/kyoto.png" alt="Kyoto" loading="lazy">
+                        </figure>
+                    </li>
+                    <li class="catalog-card">
+                        <figure class="catalog-card__figure">
+                            <figcaption class="catalog-card__name">Tailored</figcaption>
+                            <img class="catalog-card__image" src="sets/tailored.png" alt="Tailored" loading="lazy">
+                        </figure>
+                    </li>
+                </ul>
+            </section>
+
+            <section class="catalog-carousel catalog-carousel--tall" aria-labelledby="vestidos-title">
+                <h3 class="catalog__category" id="vestidos-title">Vestidos</h3>
+                <ul class="catalog-carousel__track" id="vestidos-prendas" role="list" tabindex="0"
+                    aria-labelledby="vestidos-title">
+                    <li class="catalog-card">
+                        <figure class="catalog-card__figure">
+                            <figcaption class="catalog-card__name">Lengerie Rosa</figcaption>
+                            <img class="catalog-card__image" src="vestidos/lengerie dress.png" alt="Lengerie Rosa" loading="lazy">
+                        </figure>
+                    </li>
+                    <li class="catalog-card">
+                        <figure class="catalog-card__figure">
+                            <figcaption class="catalog-card__name">Lengerie Blanco</figcaption>
+                            <img class="catalog-card__image" src="vestidos/lengerie dress (1).png" alt="Lengerie Blanco" loading="lazy">
+                        </figure>
+                    </li>
+                    <li class="catalog-card">
+                        <figure class="catalog-card__figure">
+                            <figcaption class="catalog-card__name">Lengerie Café</figcaption>
+                            <img class="catalog-card__image" src="vestidos/lengerie dress (2).png" alt="Lengerie Café" loading="lazy">
+                        </figure>
+                    </li>
+                </ul>
+            </section>
+        </section>
+
+        <section class="catalog__section" aria-labelledby="imports-title">
+            <h2 class="catalog__title" id="imports-title">Lulu Imports</h2>
+
+            <section class="catalog-carousel catalog-carousel--bags" aria-labelledby="bolsos-title">
+                <h3 class="catalog__category" id="bolsos-title">Bolsos</h3>
+                <ul class="catalog-carousel__track" id="bolsos-productos" role="list" tabindex="0"
+                    aria-labelledby="bolsos-title">
+                    <li class="catalog-card">
+                        <figure class="catalog-card__figure">
+                            <figcaption class="catalog-card__name">Coach Tote</figcaption>
+                            <img class="catalog-card__image" src="bolsos/coach tote.png" alt="Coach Tote" loading="lazy">
+                        </figure>
+                    </li>
+                    <li class="catalog-card">
+                        <figure class="catalog-card__figure">
+                            <figcaption class="catalog-card__name">Mini Jamie</figcaption>
+                            <img class="catalog-card__image" src="bolsos/mini jamie.png" alt="Mini Jamie" loading="lazy">
+                        </figure>
+                    </li>
+                    <li class="catalog-card">
+                        <figure class="catalog-card__figure">
+                            <figcaption class="catalog-card__name">Steve Madden</figcaption>
+                            <img class="catalog-card__image" src="bolsos/steve madden.png" alt="Steve Madden" loading="lazy">
+                        </figure>
+                    </li>
+                    <li class="catalog-card">
+                        <figure class="catalog-card__figure">
+                            <figcaption class="catalog-card__name">Aldo Bag</figcaption>
+                            <img class="catalog-card__image" src="bolsos/aldo bag.png" alt="Aldo Bag" loading="lazy">
+                        </figure>
+                    </li>
+                    <li class="catalog-card">
+                        <figure class="catalog-card__figure">
+                            <figcaption class="catalog-card__name">Polka Bag</figcaption>
+                            <img class="catalog-card__image" src="bolsos/polka bag.png" alt="Polka Bag" loading="lazy">
+                        </figure>
+                    </li>
+                </ul>
+            </section>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="site-footer__grid">
+            <section class="site-footer__section" aria-labelledby="contacto-title">
+                <h2 class="site-footer__title" id="contacto-title">Contacto</h2>
+
+                <address class="site-footer__contact">
+                    <ul class="site-footer__list" role="list">
+                        <li>Scz <a href="https://wa.me/59171764894">71764894</a></li>
+                        <li>Cbba <a href="https://wa.me/59171764894">71764894</a></li>
+                    </ul>
+
+                    <h3 class="site-footer__subtitle">Encuéntranos en</h3>
+                    <dl class="site-footer__locations">
+                        <dt>Cochabamba</dt>
+                        <dd>Sucursal I. Av. América entre Bernardo Monteagudo y parque del Arquitecto.</dd>
+                        <dd>Sucursal II. Av. Melchor Urquidi casi Uyuni, edif. Paseo de la Recoleta.</dd>
+                        <dd>Sucursal III. Calle Adela Zamudio entre Lincoln y Av. América.</dd>
+
+                        <dt>Santa Cruz</dt>
+                        <dd>Equipetrol, calle Los Jazmines casi Av. San Martín.</dd>
+
+                        <dt>Horarios</dt>
+                        <dd>
+                            <time datetime="09:30">9:30 a. m.</time> a
+                            <time datetime="20:00">8:00 p. m.</time>
+                        </dd>
+                    </dl>
+                </address>
+            </section>
+
+            <nav class="site-footer__section" aria-labelledby="informacion-title">
+                <h2 class="site-footer__title" id="informacion-title">Información útil</h2>
+                <ul class="site-footer__list" role="list">
+                    <li><a href="encontrar-mi-pedido.html">Encontrar mi pedido</a></li>
+                    <li><a href="envio-express.html">Envío Express</a></li>
+                    <li><a href="pedidos.html">Pedidos</a></li>
+                    <li><a href="ayuda.html">Ayuda</a></li>
+                    <li><a href="privacidad.html">Políticas de privacidad</a></li>
+                </ul>
+            </nav>
+
+            <section class="site-footer__section" aria-labelledby="redes-title">
+                <h2 class="visually-hidden" id="redes-title">Redes sociales</h2>
+                <ul class="site-footer__socials" role="list">
+                    <li>
+                        <a class="site-footer__social-link" href="https://www.instagram.com/lulumelon_bolivia/"
+                            aria-label="Instagram">
+                            <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="site-footer__social-link" href="https://wa.me/59171764894"
+                            aria-label="WhatsApp de Santa Cruz">
+                            <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="site-footer__social-link"
+                            href="https://www.facebook.com/p/lulumelon_bolivia-100066455532348/" aria-label="Facebook">
+                            <i class="fa-brands fa-facebook" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="site-footer__social-link" href="https://www.tiktok.com/@lulumelon_bol"
+                            aria-label="TikTok">
+                            <i class="fa-brands fa-tiktok" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                </ul>
+
+                <p class="site-footer__newsletter">
+                    <a href="newsletter.html">
+                        Suscríbete a nuestro newsletter y consigue tu descuento
+                    </a>
+                </p>
+            </section>
+        </div>
+
+        <img class="site-footer__brand" src="logo_lulumelon_.png" alt="Lulu Melón" loading="lazy">
+
+        <small class="site-footer__copyright">
+            © 2026 Lulu Melón. Todos los derechos reservados.
+        </small>
+    </footer>
+
+    <template id="catalog-carousel-controls">
+        <div class="catalog-carousel__controls">
+            <button class="catalog-carousel__button" type="button" data-direction="-1">
+                <i class="fa-solid fa-arrow-left" aria-hidden="true"></i>
+            </button>
+            <button class="catalog-carousel__button" type="button" data-direction="1">
+                <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+            </button>
+        </div>
+    </template>
+</body>
+
+</html>

@@ -1,0 +1,429 @@
+/* Variables compartidas */
+
+:root {
+    --color-white: #fff;
+    --color-wine: #530f0e;
+    --color-blush: #fae7e2;
+    --color-rose: #f3a0aa;
+    --color-rose-text: #ab465a;
+
+    --font-body: "Montserrat", Arial, sans-serif;
+    --font-serif: "Ancizar Serif", Georgia, serif;
+    --font-script: "Kapakana", Georgia, serif;
+
+    --header-height: 3.75rem;
+    --content-width: 68rem;
+    --page-gutter: clamp(1rem, 4vw, 2rem);
+}
+
+/* Estilos base */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: var(--color-white);
+    color: var(--color-wine);
+    font-family: var(--font-body);
+    line-height: 1.5;
+}
+
+h1,
+h2,
+h3,
+p,
+figure {
+    margin: 0;
+}
+
+img {
+    display: block;
+    max-inline-size: 100%;
+    block-size: auto;
+}
+
+a {
+    color: inherit;
+    text-underline-offset: 0.18em;
+}
+
+:focus-visible {
+    outline: 2px solid var(--color-wine);
+    outline-offset: 3px;
+}
+
+/* Accesibilidad */
+
+.visually-hidden,
+.skip-link:not(:focus) {
+    position: absolute;
+    inline-size: 1px;
+    block-size: 1px;
+    padding: 0;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+}
+
+.skip-link:focus {
+    position: fixed;
+    z-index: 10;
+    inset-block-start: 0.5rem;
+    inset-inline-start: 0.5rem;
+    padding: 0.5rem 0.75rem;
+    background: var(--color-white);
+}
+
+/* Cabecera */
+
+.site-header {
+    position: relative;
+    z-index: 100;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+    align-items: center;
+    min-block-size: var(--header-height);
+    padding-inline: clamp(0.25rem, 2vw, 1rem);
+    background: var(--color-white);
+}
+
+.site-header__brand {
+    grid-column: 2;
+}
+
+.site-header__brand img {
+    inline-size: clamp(6rem, 28vw, 8.75rem);
+}
+
+.site-header__actions {
+    grid-column: 3;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.site-header__action {
+    display: grid;
+    place-items: center;
+    min-inline-size: 0;
+    inline-size: clamp(2.25rem, 10vw, 3rem);
+    min-block-size: 44px;
+    font-size: 1.15rem;
+    text-decoration: none;
+}
+
+.site-header__action .fa-clothes-hanger {
+    display: grid;
+    place-items: center;
+    width: 1.25em;
+    height: 1.25em;
+}
+
+.site-header__action .fa-clothes-hanger svg {
+    width: 100%;
+    height: 100%;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.7;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.site-header__action > .fa-clothes-hanger,
+.site-header__hanger-fallback {
+    grid-area: 1 / 1;
+}
+
+.site-header__hanger-fallback {
+    inline-size: 1.25em;
+    block-size: 1.25em;
+}
+
+.site-header__hanger-fallback[hidden] {
+    display: none;
+}
+
+/* Menú hamburguesa */
+
+.site-menu {
+    position: relative;
+}
+
+.site-menu__toggle {
+    display: grid;
+    place-items: center;
+    inline-size: 44px;
+    block-size: 44px;
+    list-style: none;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.site-menu__toggle::-webkit-details-marker {
+    display: none;
+}
+
+.site-menu__panel {
+    position: absolute;
+    z-index: 101;
+    inset-block-start: 100%;
+    inset-inline-start: 0;
+    inline-size: min(72%, 21rem);
+    max-inline-size: 21rem;
+    block-size: calc(100vh - var(--header-height));
+    block-size: calc(100dvh - var(--header-height));
+    overflow-y: auto;
+    padding: clamp(2rem, 12vh, 7rem) var(--page-gutter) 2rem;
+    background: rgb(250 231 226 / 78%);
+    border-inline-end: 1px solid rgb(83 15 14 / 10%);
+    box-shadow: 0.25rem 0 1.25rem rgb(83 15 14 / 8%);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+}
+
+@media (max-width: 30rem) {
+    .site-menu__panel {
+        inline-size: min(64vw, 16.5rem);
+        max-inline-size: 16.5rem;
+    }
+}
+
+.site-menu__list {
+    display: grid;
+    gap: 0.75rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.site-menu__link {
+    display: block;
+    min-block-size: 44px;
+    padding-block: 0.2rem;
+    font-family: var(--font-script);
+    font-size: clamp(2.4rem, 11vw, 3.4rem);
+    line-height: 1.15;
+    text-decoration: none;
+}
+
+.site-menu__link:hover,
+.site-menu__link:focus-visible {
+    text-decoration: underline;
+}
+
+/* Pie de página */
+
+.site-footer {
+    padding: 0.75rem clamp(0.75rem, 4vw, 2rem) 0.35rem;
+    background: var(--color-blush);
+    font-family: var(--font-serif);
+    font-size: clamp(0.78rem, 2.4vw, 0.92rem);
+    line-height: 1.32;
+}
+
+.site-footer__grid {
+    display: grid;
+    grid-template-columns:
+        minmax(0, 1.12fr) minmax(0, 0.95fr) minmax(0, 1.15fr);
+    gap: clamp(0.35rem, 3vw, 1.75rem);
+    max-inline-size: var(--content-width);
+    margin-inline: auto;
+}
+
+.site-footer__section a:hover {
+    text-decoration-thickness: 2px;
+}
+
+.site-footer__title,
+.site-footer__subtitle {
+    font-family: var(--font-script);
+    font-size: clamp(1.25rem, 4.2vw, 1.7rem);
+    font-weight: 400;
+    line-height: 1.15;
+}
+
+.site-footer__subtitle {
+    margin-block-start: 0.85rem;
+}
+
+.site-footer__contact {
+    font-style: normal;
+}
+
+.site-footer__list,
+.site-footer__socials {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.site-footer__list {
+    display: grid;
+    gap: 0.35rem;
+    margin-block-start: 0.35rem;
+}
+
+.site-footer__locations {
+    margin: 0.35rem 0 0;
+}
+
+.site-footer__locations dt {
+    margin-block-start: 0.65rem;
+    font-weight: 500;
+}
+
+.site-footer__locations dd {
+    margin-inline-start: 0;
+}
+
+.site-footer__socials {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    max-inline-size: 10rem;
+}
+
+.site-footer__social-link {
+    display: grid;
+    place-items: center;
+    min-block-size: 2.75rem;
+    font-size: clamp(1.2rem, 4.8vw, 1.55rem);
+    text-decoration: none;
+}
+
+.site-footer__newsletter {
+    margin-block-start: 0.65rem;
+    padding-block-end: 0.45rem;
+    border-block-end: 1px solid currentColor;
+    font-family: var(--font-script);
+    font-size: clamp(1.05rem, 3.8vw, 1.4rem);
+    line-height: 1.1;
+}
+
+.site-footer__newsletter a {
+    text-decoration: none;
+}
+
+.site-footer__newsletter a:hover,
+.site-footer__newsletter a:focus-visible {
+    text-decoration: underline;
+}
+
+.site-footer__brand {
+    inline-size: min(100%, 26rem);
+    margin: 0.9rem auto 0.35rem;
+}
+
+.site-footer__copyright {
+    display: block;
+    font-size: 0.75rem;
+    text-align: center;
+}
+
+/* Escritorio */
+
+@media (min-width: 48rem) {
+    :root {
+        --header-height: 5.25rem;
+    }
+
+    .site-header {
+        padding-inline: clamp(1rem, 4vw, 3rem);
+    }
+
+    .site-header__brand img {
+        inline-size: 11rem;
+    }
+
+    .site-menu__toggle,
+    .site-header__action {
+        inline-size: 3rem;
+        font-size: 1.25rem;
+    }
+
+    .site-footer {
+        padding-block: 0.75rem 0.4rem;
+    }
+
+    .site-footer__grid {
+        grid-template-columns: 2fr 1fr 1fr;
+        max-inline-size: 56rem;
+    }
+
+    .site-footer__brand {
+        inline-size: min(100%, 17rem);
+        margin-block: 0.65rem 0.25rem;
+    }
+}
+
+@media (max-width: 30rem) {
+    .site-footer {
+        padding-inline: 0.85rem;
+        font-size: clamp(0.7rem, 2.8vw, 0.82rem);
+    }
+
+    .site-footer__grid {
+        width: 100%;
+        grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.88fr) minmax(0, 0.97fr);
+        gap: 0.65rem;
+    }
+
+    .site-footer__title,
+    .site-footer__subtitle {
+        font-size: clamp(1.25rem, 5.5vw, 1.55rem);
+    }
+
+    .site-footer__list {
+        gap: 0.45rem;
+    }
+
+    .site-footer__locations dt {
+        margin-block-start: 0.55rem;
+    }
+
+    .site-footer__socials {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        max-inline-size: 5.5rem;
+    }
+
+    .site-footer__social-link {
+        min-block-size: 2.15rem;
+        font-size: 1.45rem;
+    }
+
+    .site-footer__newsletter {
+        margin-block-start: 0.75rem;
+        font-size: clamp(1.15rem, 5vw, 1.4rem);
+    }
+
+    .site-footer__brand {
+        inline-size: min(85%, 16.5rem);
+        margin-block: 0.75rem 0.35rem;
+    }
+}
+
+.site-header__action--cart {
+    position: relative;
+}
+
+.site-header__cart-count {
+    position: absolute;
+    inset-block-start: 0.1rem;
+    inset-inline-end: 0;
+    display: grid;
+    place-items: center;
+    min-inline-size: 1.15rem;
+    min-block-size: 1.15rem;
+    padding-inline: 0.16rem;
+    border-radius: 1rem;
+    background-color: var(--color-wine);
+    color: var(--color-white);
+    font: 600 0.65rem / 1 var(--font-body);
+}
+
+.site-header__cart-count[hidden] {
+    display: none;
+}

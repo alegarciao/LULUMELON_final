@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="es-BO">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Lulu Melón | Inicio</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Ancizar+Serif:wght@300;400;500&family=Kapakana&family=Montserrat:wght@400;500&display=swap">
+
+    <link rel="stylesheet" href="globals.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <script src="carrito.js" defer></script>
+    <script src="inicio.js" defer></script>
+</head>
+
+<body>
+    <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+    <header class="site-header">
+        <details class="site-menu">
+            <summary class="site-menu__toggle">
+                <i class="fa-solid fa-bars" aria-hidden="true"></i>
+                <span class="visually-hidden">Menú principal</span>
+            </summary>
+
+            <nav class="site-menu__panel" aria-label="Navegación principal">
+                <ul class="site-menu__list" role="list">
+                    <li class="site-menu__item">
+                        <a class="site-menu__link" href="index.html" aria-current="page">
+                            Inicio
+                        </a>
+                    </li>
+                    <li class="site-menu__item">
+                        <a class="site-menu__link" href="probador.html">Probador</a>
+                    </li>
+                    <li class="site-menu__item">
+                        <a class="site-menu__link" href="sobre-nosotros.html">
+                            Sobre Nosotros
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </details>
+
+        <a class="site-header__brand" href="index.html">
+            <img src="logo_lulumelon_.png" width="150" height="90" alt="Lulu Melón, inicio">
+        </a>
+
+        <nav class="site-header__actions" aria-label="Accesos de la tienda">
+            <a class="site-header__action" href="catalogo.html" aria-label="Buscar en el catálogo"
+                title="Buscar en el catálogo">
+                <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+            </a>
+            <a class="site-header__action" href="carrito.html" aria-label="Carrito">
+                <i class="fa-solid fa-cart-shopping" aria-hidden="true"></i>
+            </a>
+            <a class="site-header__action" href="probador.html" aria-label="Probador" title="Probador">
+                <i class="fa-solid fa-clothes-hanger" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" focusable="false">
+                        <path
+                            d="M9.5 7.5a2.5 2.5 0 1 1 3.1 2.42c-.76.25-1.1.8-1.1 1.58v.25L3.5 17.6a1.5 1.5 0 0 0 1.38 2.15h14.24a1.5 1.5 0 0 0 1.38-2.15l-8-5.85" />
+                    </svg>
+                </i>
+            </a>
+        </nav>
+    </header>
+    <div class="home-splash" id="home-splash" role="status" hidden>
+        <img class="home-splash__logo" src="logo_lulumelon_.png" alt="Lulu Melón" fetchpriority="high">
+        <span class="visually-hidden">Cargando el inicio</span>
+    </div>
+
+    <main id="contenido">
+        <section class="collection" aria-labelledby="collection-title">
+            <img class="collection__hero" src="im-inicio.png" width="393" height="437"
+                alt="Seventh Collection, 19 de abril a las 4 p. m. Prendas de la colección en un perchero rodeado de vegetación."
+                fetchpriority="high">
+
+            <header class="collection__intro">
+                <h1 class="collection__title" id="collection-title" lang="en">
+                    Collection The Vacation Edit
+                </h1>
+                <p class="collection__season" lang="en">Collection Summer 26</p>
+                <p class="collection__description">
+                    Una colección inspirada en la delicadeza y frescura de la primavera.
+                    Prendas femeninas en tonos suaves, estampados florales y siluetas
+                    ligeras que combinan romanticismo con un aire natural y relajado.
+                    Una propuesta pensada para sentirse libre, dulce y elegante, como
+                    una tarde de primavera entre flores.
+                </p>
+            </header>
+
+            <figure class="collection__editorial">
+                <img class="collection__photo" src="palmeras.png" alt="Palmeras junto al mar" loading="lazy">
+                <img class="collection__photo" src="foto home.png"
+                    alt="Modelo con un conjunto verde claro en una terraza" loading="lazy">
+            </figure>
+        </section>
+
+        <section class="best-sellers" aria-labelledby="best-sellers-title">
+            <h2 class="best-sellers__title" id="best-sellers-title" lang="en">
+                Best Sellers
+            </h2>
+
+            <ul class="best-sellers__list" role="list">
+                <li class="best-sellers__item best-sellers__item--poncho">
+                    <figure class="product-card">
+                        <figcaption class="product-card__name">Poncho Tejido</figcaption>
+                        <img class="product-card__image" src="poncho_tejido.png" alt="Poncho beige tejido con flecos"
+                            loading="lazy">
+                    </figure>
+                </li>
+
+                <li class="best-sellers__item best-sellers__item--featured">
+                    <figure class="product-card">
+                        <figcaption class="product-card__name">Shangai Lace</figcaption>
+                        <img class="product-card__image product-card__image--tall" src="shangai_lace.png"
+                            alt="Conjunto azul oscuro de encaje con top y falda larga" loading="lazy">
+                    </figure>
+                    <a class="best-sellers__link" href="catalogo.html">
+                        <span class="best-sellers__arrow" aria-hidden="true">⬆</span>
+                        Ver en el probador<span class="visually-hidden">, Shangai Lace</span>
+                    </a>
+                </li>
+
+                <li class="best-sellers__item best-sellers__item--lace-top">
+                    <figure class="product-card">
+                        <figcaption class="product-card__name">Lace Top</figcaption>
+                        <img class="product-card__image" src="lace_top.png" alt="Top verde claro de encaje con tirantes"
+                            loading="lazy">
+                    </figure>
+                </li>
+            </ul>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="site-footer__grid">
+            <section class="site-footer__section" aria-labelledby="contacto-title">
+                <h2 class="site-footer__title" id="contacto-title">Contacto</h2>
+
+                <address class="site-footer__contact">
+                    <ul class="site-footer__list" role="list">
+                        <li>Santa Cruz <a href="https://wa.me/59171764894">71764894</a></li>
+                        <li>Cochabamba <a href="https://wa.me/59171764894">71764894</a></li>
+                    </ul>
+
+                    <h3 class="site-footer__subtitle">Encuéntranos en</h3>
+                    <dl class="site-footer__locations">
+                        <dt>Cochabamba</dt>
+                        <dd>
+                            Sucursal I. Av. América entre Bernardo Monteagudo y
+                            parque del Arquitecto.
+                        </dd>
+                        <dd>
+                            Sucursal II. Av. Melchor Urquidi casi Uyuni,
+                            edif. Paseo de la Recoleta.
+                        </dd>
+                        <dd>
+                            Sucursal III. Calle Adela Zamudio entre Lincoln y Av. América.
+                        </dd>
+
+                        <dt>Santa Cruz</dt>
+                        <dd>Equipetrol, calle Los Jazmines casi Av. San Martín.</dd>
+
+                        <dt>Horarios</dt>
+                        <dd><time datetime="09:30">9:30 a. m.</time> a
+                            <time datetime="20:00">8:00 p. m.</time>
+                        </dd>
+                    </dl>
+                </address>
+            </section>
+
+            <nav class="site-footer__section" aria-labelledby="informacion-title">
+                <h2 class="site-footer__title" id="informacion-title">
+                    Información útil
+                </h2>
+                <ul class="site-footer__list" role="list">
+                    <li><a href="encontrar-mi-pedido.html">Encontrar mi pedido</a></li>
+                    <li><a href="envio-express.html">Envío Express</a></li>
+                    <li><a href="pedidos.html">Pedidos</a></li>
+                    <li><a href="ayuda.html">Ayuda</a></li>
+                    <li><a href="privacidad.html">Políticas de privacidad</a></li>
+                </ul>
+            </nav>
+
+            <section class="site-footer__section" aria-labelledby="redes-title">
+                <h2 class="visually-hidden" id="redes-title">Redes sociales</h2>
+
+                <ul class="site-footer__socials" role="list">
+                    <li>
+                        <a class="site-footer__social-link" href="https://www.instagram.com/lulumelon_bolivia/">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="site-footer__social-link" href="https://wa.me/59171764894">
+                            <i class="fa-brands fa-whatsapp"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="site-footer__social-link"
+                            href="https://www.facebook.com/p/lulumelon_bolivia-100066455532348/">
+                            <i class="fa-brands fa-facebook"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="site-footer__social-link" href="https://www.tiktok.com/@lulumelon_bol">
+                            <i class="fa-brands fa-tiktok"></i>
+                        </a>
+                    </li>
+                </ul>
+
+                <p class="site-footer__newsletter">
+                    <a href="newsletter.html">
+                        Suscríbete a nuestro newsletter y consigue tu descuento
+                    </a>
+                </p>
+            </section>
+        </div>
+
+        <img class="site-footer__brand" src="logo_lulumelon_.png" width="339" height="39" alt="Lulu Melón"
+            loading="lazy">
+
+        <small class="site-footer__copyright">
+            © 2026 Lulu Melón. Todos los derechos reservados.
+        </small>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,171 @@
+/* Colección */
+
+.collection__hero {
+    inline-size: 100%;
+    max-block-size: 44rem;
+    object-fit: cover;
+    object-position: center top;
+}
+
+.collection__intro {
+    max-inline-size: var(--content-width);
+    margin-inline: auto;
+    padding: 1rem var(--page-gutter) clamp(2.75rem, 10vw, 5rem);
+}
+
+.collection__title,
+.best-sellers__title {
+    color: var(--color-rose-text);
+    font-family: var(--font-script);
+    font-size: clamp(2rem, 9vw, 3.75rem);
+    font-weight: 400;
+    line-height: 1.15;
+}
+
+.collection__season {
+    margin-block-start: 0.25rem;
+    font-family: var(--font-serif);
+    font-size: 1rem;
+}
+
+.collection__description {
+    max-inline-size: 42ch;
+    margin: 0.75rem auto 0;
+    font-size: clamp(0.95rem, 4vw, 1.125rem);
+    line-height: 1.45;
+    text-align: center;
+}
+
+.collection__editorial {
+    display: grid;
+    grid-template-columns: 52fr 48fr;
+}
+
+.collection__photo {
+    inline-size: 100%;
+    block-size: clamp(16rem, 98vw, 36rem);
+    object-fit: cover;
+}
+
+/* Best Sellers */
+
+.best-sellers {
+    max-inline-size: var(--content-width);
+    margin-inline: auto;
+    padding: clamp(2rem, 8vw, 4rem) var(--page-gutter);
+}
+
+.best-sellers__list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-areas:
+        "poncho destacado"
+        "top    destacado";
+    align-items: start;
+    gap: clamp(1rem, 5vw, 2.5rem);
+    margin: 1.25rem 0 0;
+    padding: 0;
+    list-style: none;
+}
+
+.best-sellers__item--poncho {
+    grid-area: poncho;
+}
+
+.best-sellers__item--featured {
+    grid-area: destacado;
+}
+
+.best-sellers__item--lace-top {
+    grid-area: top;
+}
+
+.product-card {
+    display: grid;
+    justify-items: center;
+    gap: 0.5rem;
+}
+
+.product-card__name,
+.best-sellers__link {
+    font-family: var(--font-serif);
+    font-size: clamp(0.95rem, 3.6vw, 1.15rem);
+    text-align: center;
+}
+
+.product-card__image {
+    inline-size: 100%;
+    max-inline-size: 15rem;
+    aspect-ratio: 5 / 6;
+    object-fit: contain;
+}
+
+.product-card__image--tall {
+    aspect-ratio: 174 / 407;
+}
+
+.best-sellers__link {
+    display: grid;
+    justify-items: center;
+    min-block-size: 44px;
+    inline-size: fit-content;
+    margin: 0.5rem auto 0;
+}
+
+.best-sellers__arrow {
+    color: var(--color-rose);
+    font-size: 1.5rem;
+    line-height: 1;
+}
+
+.home-splash {
+    position: fixed;
+    z-index: 10;
+    inset: 0;
+    display: grid;
+    place-items: center;
+    padding: var(--page-gutter);
+    background-color: var(--color-white);
+}
+
+.home-splash[hidden] {
+    display: none;
+}
+
+.home-splash__logo {
+    inline-size: min(94%, 43rem);
+    block-size: auto;
+    animation: home-splash-logo 2.2s ease-in-out both;
+}
+
+@keyframes home-splash-logo {
+    0% {
+        opacity: 0;
+        transform: scale(0.94);
+    }
+
+    18%,
+    82% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    100% {
+        opacity: 0.9;
+        transform: scale(1);
+    }
+}
+
+.home-splash-active {
+    overflow: hidden;
+}
+
+/* Durante la carga, la cabecera muestra solo los iconos de la derecha. */
+.home-splash-active .site-header {
+    z-index: 11;
+}
+
+.home-splash-active .site-header__brand,
+.home-splash-active .site-menu {
+    visibility: hidden;
+}
