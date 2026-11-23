@@ -1,0 +1,61 @@
+.error-page {
+    --error-ink: #4c3322;
+
+    display: grid;
+    justify-items: center;
+    align-content: start;
+    min-block-size: calc(100vh - var(--header-height));
+    min-block-size: calc(100dvh - var(--header-height));
+    padding: clamp(5rem, 31vw, 17rem) var(--page-gutter) clamp(6rem, 27vw, 18rem);
+    background-color: var(--color-white);
+    color: var(--error-ink);
+    text-align: center;
+}
+
+.error-page__intro {
+    font: 400 clamp(2.75rem, 18vw, 9rem) / 0.95 var(--font-serif);
+    letter-spacing: 0.01em;
+}
+
+.error-page__heading {
+    display: grid;
+    justify-items: center;
+    inline-size: min(100%, 48rem);
+    margin-block-start: clamp(0.25rem, 3vw, 1.3rem);
+    font-weight: 400;
+}
+
+.error-page__code {
+    display: block;
+    font: 400 clamp(7rem, 37vw, 20rem) / 0.94 var(--font-script);
+}
+
+.error-page__code:is(img) {
+    inline-size: 100%;
+    block-size: auto;
+}
+
+.error-page__message {
+    margin-block-start: clamp(0.25rem, 1.5vw, 0.75rem);
+    color: #211817;
+    font: 400 clamp(1.5rem, 5.3vw, 2.8rem) / 1.15 var(--font-script);
+}
+
+.error-page__back {
+    display: grid;
+    place-items: center;
+    inline-size: min(70%, 24rem);
+    min-block-size: clamp(44px, 8.8vw, 4.5rem);
+    margin-block-start: clamp(2.75rem, 14vw, 7.5rem);
+    padding: 0.55rem 1rem;
+    border-radius: clamp(0.6rem, 2.5vw, 1.3rem);
+    background-color: var(--color-wine);
+    color: var(--color-blush);
+    font: 700 clamp(1rem, 3.6vw, 1.65rem) / 1.15 var(--font-serif);
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.error-page__back:hover {
+    text-decoration: underline;
+}

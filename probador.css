@@ -1,0 +1,260 @@
+.fitting-room {
+    --fitting-border: #5a3f32;
+    --fitting-arrow: #c05a70;
+
+    max-inline-size: 59rem;
+    margin-inline: auto;
+    padding: clamp(1.75rem, 6vw, 4rem) var(--page-gutter) clamp(1.5rem, 7vw, 4.5rem);
+}
+
+.fitting-room [hidden] {
+    display: none;
+}
+
+.fitting-room__layout {
+    display: grid;
+    grid-template-columns: minmax(0, 0.95fr) minmax(0, 1fr);
+    align-items: start;
+    gap: clamp(0.65rem, 6vw, 4.5rem);
+}
+
+.fitting-room__empty {
+    padding: clamp(2.5rem, 10vw, 6rem) 0;
+    text-align: center;
+}
+
+.fitting-room__empty h2 {
+    font: 400 clamp(2rem, 7vw, 3.5rem) / 1.1 var(--font-script);
+}
+
+.fitting-room__empty p {
+    margin-block: 0.75rem 1.25rem;
+}
+
+.fitting-rack {
+    position: relative;
+    display: grid;
+    justify-items: center;
+    align-content: start;
+    gap: clamp(0.75rem, 2.5vw, 1.25rem);
+    min-inline-size: 0;
+    padding-block-start: 3rem;
+    padding-block-end: 3rem;
+}
+
+.fitting-rack__arrow {
+    position: absolute;
+    inset-inline-start: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    display: grid;
+    place-items: center;
+    inline-size: 44px;
+    block-size: 44px;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    color: var(--fitting-arrow);
+    font-size: clamp(1.45rem, 6vw, 2.4rem);
+    cursor: pointer;
+}
+
+#probador-anterior {
+    inset-block-start: 0.25rem;
+}
+
+#probador-siguiente {
+    inset-block-end: 0.25rem;
+}
+
+.fitting-rack__arrow[aria-disabled="true"] {
+    opacity: 0.38;
+    cursor: default;
+}
+
+.fitting-rack__list {
+    display: grid;
+    grid-auto-rows: clamp(7.5rem, 14vw, 10.5rem);
+    gap: clamp(1.15rem, 3.5vw, 1.75rem);
+    inline-size: 100%;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.fitting-rack__product {
+    display: grid;
+    place-items: center;
+    inline-size: 100%;
+    padding: 0.35rem;
+    border: 2px solid transparent;
+    border-radius: 0.75rem;
+    background: transparent;
+    color: inherit;
+    font: inherit;
+    cursor: grab;
+}
+
+.fitting-rack__product[aria-pressed="true"] {
+    border-color: var(--fitting-arrow);
+    background-color: #fff5f3;
+}
+
+.fitting-rack__product:active {
+    cursor: grabbing;
+}
+
+.fitting-rack__image {
+    inline-size: 100%;
+    block-size: clamp(5rem, 31vw, 12rem);
+    object-fit: contain;
+    pointer-events: none;
+}
+
+.outfit-board {
+    display: grid;
+    justify-items: center;
+    gap: clamp(0.55rem, 2.4vw, 1.25rem);
+    padding-block-start: 0;
+    text-align: center;
+}
+
+.outfit-board__title {
+    color: #211817;
+    font: 400 clamp(1.55rem, 6vw, 3.45rem) / 1.12 var(--font-script);
+}
+
+.outfit-board__hint {
+    max-inline-size: 26ch;
+    font-size: clamp(0.7rem, 2.2vw, 0.85rem);
+    line-height: 1.4;
+}
+
+.outfit-board__slots {
+    --slot-height: clamp(9rem, 42vw, 18rem);
+    --slot-gap: clamp(0.6rem, 3vw, 1.5rem);
+
+    display: grid;
+    gap: var(--slot-gap);
+    inline-size: min(100%, 20rem);
+    margin-block-start: clamp(0.75rem, 3vw, 1.25rem);
+}
+
+.outfit-board__slot {
+    display: grid;
+    place-items: center;
+    inline-size: 100%;
+    block-size: var(--slot-height);
+    padding: clamp(0.35rem, 2vw, 1rem);
+    overflow: hidden;
+    border: 1.5px solid var(--fitting-border);
+    border-radius: 0;
+    background-color: var(--color-white);
+    color: var(--fitting-border);
+    font: inherit;
+    cursor: pointer;
+}
+
+.outfit-board__slot--full {
+    block-size: calc(2 * var(--slot-height) + var(--slot-gap));
+}
+
+.outfit-board__slot--over {
+    border-color: var(--fitting-arrow);
+    background-color: var(--color-blush);
+}
+
+.outfit-board__placeholder {
+    font: 400 clamp(0.8rem, 3vw, 1.05rem) / 1.2 var(--font-serif);
+}
+
+.outfit-board__image {
+    inline-size: 100%;
+    block-size: 100%;
+    min-block-size: 0;
+    object-fit: contain;
+    pointer-events: none;
+}
+
+.outfit-board__clear {
+    min-block-size: 44px;
+    padding: 0 0.5rem;
+    border: 0;
+    background: transparent;
+    color: var(--color-wine);
+    font: 400 1rem / 1.2 var(--font-serif);
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.fitting-room__catalog-link {
+    display: inline-grid;
+    place-items: center;
+    min-block-size: 44px;
+    padding: 0.5rem clamp(0.75rem, 4vw, 1.7rem);
+    border-radius: 0.7rem;
+    background-color: var(--color-wine);
+    color: var(--color-white);
+    font: 500 1.05rem / 1.2 var(--font-serif);
+    text-decoration: none;
+}
+
+.fitting-room__catalog-link:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 47.999rem) {
+    .fitting-room {
+        padding-inline: clamp(0.75rem, 4vw, 1.25rem);
+    }
+
+    .fitting-room__layout {
+        grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+        align-items: start;
+        gap: clamp(0.55rem, 3vw, 0.9rem);
+    }
+
+    .fitting-rack {
+        padding-block: 2.75rem;
+    }
+
+    .fitting-rack__product {
+        touch-action: none;
+    }
+
+    .fitting-rack__list {
+        grid-auto-rows: clamp(8rem, 31vw, 10.25rem);
+        gap: clamp(1.15rem, 4.5vw, 1.65rem);
+    }
+
+    .fitting-rack__image {
+        block-size: clamp(7.75rem, 30vw, 10rem);
+    }
+
+    .outfit-board {
+        padding-block-start: 0;
+        gap: clamp(0.7rem, 3vw, 1rem);
+    }
+
+    .outfit-board__title {
+        min-block-size: clamp(4.25rem, 16vw, 5.5rem);
+        display: grid;
+        place-items: center;
+        margin-block-start: 0.25rem;
+    }
+
+    .outfit-board__hint {
+        min-block-size: 2.8rem;
+    }
+
+    .outfit-board__slots {
+        --slot-height: clamp(10.25rem, 42vw, 14rem);
+        --slot-gap: clamp(1.25rem, 5vw, 2rem);
+        margin-block-start: clamp(0.25rem, 2vw, 0.75rem);
+    }
+
+    .outfit-board__clear,
+    .fitting-room__catalog-link {
+        margin-inline: auto;
+    }
+}
